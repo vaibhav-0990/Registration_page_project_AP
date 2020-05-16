@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Indivisual Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form>
+        <div class="container">
+            <h2>Register Yourself!</h2>
+            <div class="zero">
+                First name:<input type="text" id="fname" placeholder="Enter your firstname" name="fname"><br> Last name:<input type="text" id="lname" placeholder="Enter your lastname" name="lname"><br> e-mail Id:
+                <input type="email" id="eid" placeholder="Enter your email id" name="emailid"><br> Contact no:<input type="tel" id="telno" placeholder="Enter your telephone number" name="telephone"><br>
+            </div>
+            <div class="pehla">
+                <fieldset>
+                    <legend>
+                        <h4>What is your Branch ?</h4>
+                    </legend>
+                    <select id="Branch" placeholder="Branch" name="Branch">
+                        <option>Computer science</option>
+                        <option>Information Technology</option>
+                        <option>ECE</option>
+                        <option>Electrical</option>
+                        <option>Mechanical</option>
+                        <option>Civil</option>
+                        <option>Others</option>
+                        </select><br>
+                </fieldset>
+            </div>
+            <div class="dosra">
+                <fieldset>
+                    <legend>
+                        <h4>In which Year are you studying ?</h4>
+                    </legend>
+                    <select id="Year" name="Year">
+                    <option>I</option>
+                    <option>II</option>
+                    <option>III</option>
+                    <option>IV</option>
+                    </select><br>
+                </fieldset>
+            </div>
+            <div class="teesra">
+                <fieldset>
+                    <legend>
+                        <h4>Gender:</h4>
+                    </legend>
+                    Male<input type="radio" name="gender"><br>Female<input type="radio" name="gender"><br>others<input type="radio" name="gender"><br>
+                </fieldset>
+            </div>
+            <div>
+                <button type="submit" id="register">Register</button>
+            </div>
+        </div>
+    </form>
+</body>
+<script type="text/javascript">
+    document.getElementById("register").addEventListener("click", function(e) {
+        var fieldValue = document.getElementById("fname").value;
+        if (fieldValue == null || fieldValue == "") {
+            e.preventDefault();
+            alert("you must enter a firstname.");
+        }
+    });
+    document.getElementById("register").addEventListener("click", function(e) {
+        var fieldValue = document.getElementById("lname").value;
+        if (fieldValue == null || fieldValue == "") {
+            e.preventDefault();
+            alert("you must enter a lastname.");
+        }
+    });
+    document.getElementById("register").addEventListener("click", function(e) {
+        var fieldValue = document.getElementById("eid").value;
+        if (fieldValue == null || fieldValue == "") {
+            e.preventDefault();
+            alert("you must enter a email id.");
+        }
+    });
+    document.getElementById("register").addEventListener("click", function(e) {
+        var fieldValue = document.getElementById("telno").value;
+        if (fieldValue == null || fieldValue == "") {
+            e.preventDefault();
+            alert("you must enter a contact number.");
+        }
+    });
+</script>
+
+</html>
